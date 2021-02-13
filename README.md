@@ -22,9 +22,16 @@ $ composer create-project --prefer-dist laravel/laravel ./
 $ composer create-project --prefer-dist laravel/laravel=8.* ./
 ```
 
-
 5.`http://localhost/`でLaravelのウェルカムページが表示されたら成功です!  
 止めたい時は以下のコマンドを入力してください。  
 ```
 $  docker stop $(docker ps -q) 
+```
+
+```
+# テストの実行（ローカルから）
+docker-compose exec php ./vendor/bin/phpunit
+# テストの実行（コンテナ内から）
+./vendor/bin/phpunit
+
 ```
